@@ -10,13 +10,13 @@ class RandomWords extends StatefulWidget {
 
 class _RandomWordsState extends State<RandomWords> {
   final _randomWordPairs = <WordPair>[];
-  final _savedWordPairs = Set<WordPair>();
+  final _savedWordPairs = <WordPair>{};
 
   Widget _buildList() {
     return ListView.builder(
       padding: const EdgeInsets.all(16),
       itemBuilder: (context, item) {
-        if (item.isOdd) return Divider();
+        if (item.isOdd) return const Divider();
 
         final index = item ~/ 2;
 
